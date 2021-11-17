@@ -3915,6 +3915,8 @@ enum : uint16_t
 
     STR_UNSUPPORTED_OBJECT_FORMAT = 6459,
 
+    STR_FOUND_RCT1_INSTEAD_AT_PATH = 6462,
+
     // Have to include resource strings (from scenarios and objects) for the time being now that language is partially working
     /* MAX_STR_COUNT = 32768 */ // MAX_STR_COUNT - upper limit for number of strings, not the current count strings
 };

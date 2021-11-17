@@ -3656,6 +3656,7 @@ STR_6455    :Can’t rename sign…
 STR_6456    :Giant Screenshot
 STR_6457    :Report a bug on GitHub
 STR_6458    :Follow this on Main View
+STR_6462    :Could not find {STRING} at this path. This appears to be a directory for RollerCoaster Tycoon 1, please select the directory where you installed RollerCoaster Tycoon 2.
 
 #############
 # Scenarios #

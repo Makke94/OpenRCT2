@@ -75,6 +75,20 @@ bool platform_original_game_data_exists(const utf8* path)
     return Platform::FileExists(checkPath);
 }
 
+bool platform_rct1_game_data_exists(const utf8* path)
+{
+    utf8 checkCsg1[MAX_PATH];
+    safe_strcpy(checkCsg1, path, MAX_PATH);
+    safe_strcat_path(checkCsg1, "Data", MAX_PATH);
+
+    utf8 checkCsg11[MAX_PATH];
+    safe_strcpy(checkCsg11, checkCsg1, MAX_PATH);
+
+    safe_strcat_path(checkCsg1, "csg1.dat", MAX_PATH);
+    safe_strcat_path(checkCsg11, "csg1.1", MAX_PATH);
+    return Platform::FileExists(checkCsg1) || Platform::FileExists(checkCsg11);
+}
+
 bool platform_ensure_directory_exists(const utf8* path)
 {
     if (platform_directory_exists(path))

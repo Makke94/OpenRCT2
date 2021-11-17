@@ -929,8 +929,14 @@ bool config_find_or_browse_install_directory()
                 {
                     return true;
                 }
-
-                uiContext->ShowMessageBox(format_string(STR_COULD_NOT_FIND_AT_PATH, &g1DatPath));
+                else if (chosenOption == hdd && platform_rct1_game_data_exists(installPath.c_str()))
+                {
+                    uiContext->ShowMessageBox(format_string(STR_FOUND_RCT1_INSTEAD_AT_PATH, &g1DatPath));
+                }
+                else
+                {
+                    uiContext->ShowMessageBox(format_string(STR_COULD_NOT_FIND_AT_PATH, &g1DatPath));
+                }
             }
         }
         catch (const std::exception& ex)
